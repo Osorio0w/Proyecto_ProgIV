@@ -1,0 +1,11 @@
+div.gatitos {
+    margin: 10px 15px ;
+   display: flex;
+   justify-content: space-around;
+   background-color: chartreuse;
+}
+
+img {
+    width: 15rem;
+    border: 1px salmon solid;
+}
