@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas - Fototeca</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fototeca.html">Fototeca</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <h1>Fototeca de Gatitos</h1>
+            <p>Descubre nuestra colección de imágenes y videos adorables</p>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="fotos">Fotos</button>
+            <button class="filter-btn" data-filter="videos">Videos</button>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-grid">
+                <!-- Fotos -->
+                <div class="gallery-item fotos">
+                    <img src="assets/gatito1.jpg" alt="Gatito juguetón">
+                    <div class="overlay">
+                        <h3>Gatito Curioso</h3>
+                        <p>Explorando el mundo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fotos">
+                    <img src="assets/gatito2.jpeg" alt="Gatito tierno">
+                    <div class="overlay">
+                        <h3>Gatito Dormilón</h3>
+                        <p>Hora de la siesta</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fotos">
+                    <img src="assets/gatito3.jpeg" alt="Gatito elegante">
+                    <div class="overlay">
+                        <h3>Gatito Elegante</h3>
+                        <p>Pose perfecta</p>
+                    </div>
+                </div>
+
+                <!-- Videos (puedes agregar videos reales después) -->
+                <div class="gallery-item videos">
+                    <div class="video-placeholder">
+                        <span>🎥</span>
+                        <p>Video de gatitos jugando</p>
+                    </div>
+                    <div class="overlay">
+                        <h3>Gatitos Jugando</h3>
+                        <p>Momentos divertidos</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item videos">
+                    <div class="video-placeholder">
+                        <span>🎥</span>
+                        <p>Video de gatito comiendo</p>
+                    </div>
+                    <div class="overlay">
+                        <h3>Hora de Comer</h3>
+                        <p>¡Delicioso!</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item fotos">
+                    <img src="https://placekitten.com/400/300" alt="Gatito adicional">
+                    <div class="overlay">
+                        <h3>Gatito Explorador</h3>
+                        <p>Nuevas aventuras</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Patitas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

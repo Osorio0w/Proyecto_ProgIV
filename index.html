@@ -1,47 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patitas</title>
+    <title>Patitas - Inicio</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Tutoriales</a></li>
-            <li><a href="#">Cursos</a></l>
-            <li><a href="#">Bootcamps</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
-    <h1>Bienvenido a mi página</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fototeca.html">Fototeca</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="gatitos">
-        <figure>
-            <a href="#"> 
-                <img src="assets/gatito1.jpg" alt="gatito lindo" srcset=""> 
-            </a>
-            <figcaption>Gatito 1</figcaption>
-        </figure>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illum, odio iste voluptates qui quibusdam optio expedita doloribus provident omnis nostrum, unde, suscipit blanditiis rerum quia voluptate quidem in aperiam.</p>
-        <figure>
-            <a href="#"> 
-                <img src="assets/gatito2.jpeg" alt="gatito lindo" srcset="">
-            </a>
-            <figcaption>Gatito 2</figcaption>
-            </figure>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illum, odio iste voluptates qui quibusdam optio expedita doloribus provident omnis nostrum, unde, suscipit blanditiis rerum quia voluptate quidem in aperiam.</p>
-        <figure>
-            <a href="#">
-            <img src="assets/gatito3.jpeg" alt="gatito lindo" srcset="">
-            </a>
-            <figcaption>Gatito 3</figcaption>
-        </figure>
-    </div>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Patitas</h1>
+            <p>El paraíso para los amantes de los gatitos</p>
+            <a href="fototeca.html" class="cta-button">Ver Galería</a>
+        </section>
+
+        <section class="about">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>En Patitas nos dedicamos a compartir la belleza y ternura de los gatos. Nuestra misión es crear una comunidad donde los amantes de los felinos puedan disfrutar de contenido adorable y educativo.</p>
+                    <p>Explora nuestra fototeca llena de imágenes y videos que te derretirán el corazón.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/gatito1.jpg" alt="Gatito adorable">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>¿Qué encontrarás aquí?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📸 Fototeca</h3>
+                    <p>Galería con las fotos más adorables de gatitos</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎥 Videos</h3>
+                    <p>Momentos divertidos y tiernos en video</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💕 Comunidad</h3>
+                    <p>Conecta con otros amantes de los gatos</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Patitas. Todos los derechos reservados.</p>
+        <p>Hecho con 💖 para los amantes de los gatos</p>
+    </footer>
 </body>
 </html>
