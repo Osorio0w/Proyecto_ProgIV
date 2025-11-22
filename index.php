@@ -11,9 +11,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="fototeca.html">Fototeca</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="fototeca.php">Fototeca</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -22,7 +22,7 @@
         <section class="hero">
             <h1>Bienvenido a Patitas</h1>
             <p>El paraíso para los amantes de los gatitos</p>
-            <a href="fototeca.html" class="cta-button">Ver Galería</a>
+            <a href="fototeca.php" class="cta-button">Ver Galería</a>
         </section>
 
         <section class="about">
@@ -58,7 +58,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Patitas. Todos los derechos reservados.</p>
+        <p>&copy; <?php echo date('Y'); ?> Patitas. Todos los derechos reservados.</p>
         <p>Hecho con 💖 para los amantes de los gatos</p>
     </footer>
 </body>

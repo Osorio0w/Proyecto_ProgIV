@@ -11,9 +11,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="fototeca.html">Fototeca</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="fototeca.php">Fototeca</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -92,7 +92,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Patitas. Todos los derechos reservados.</p>
+        <p>&copy; <?php echo date('Y'); ?> Patitas. Todos los derechos reservados.</p>
     </footer>
 
     <script src="filtrogaleria.js"></script>
