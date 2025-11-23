@@ -1,7 +1,7 @@
 <?php
 include 'config/database.php';
 
-// Procesar formulario de nuevo comentario
+// formulario de nuevo comentario
 if ($_POST && isset($_POST['accion']) && $_POST['accion'] == 'crear') {
     $nombreyapellido = $_POST['nombreyapellido'];
     $usuario = $_POST['usuario'];
@@ -27,7 +27,7 @@ if ($_POST && isset($_POST['accion']) && $_POST['accion'] == 'crear') {
     }
 }
 
-// Procesar edición de comentario
+//  edición de comentario
 if ($_POST && isset($_POST['accion']) && $_POST['accion'] == 'editar') {
     $id = $_POST['id'];
     $nota = $_POST['nota'];
@@ -46,7 +46,7 @@ if ($_POST && isset($_POST['accion']) && $_POST['accion'] == 'editar') {
     }
 }
 
-// Procesar eliminación de comentario
+// eliminación de comentario
 if (isset($_GET['eliminar'])) {
     $id = $_GET['eliminar'];
     
