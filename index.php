@@ -14,6 +14,7 @@
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="fototeca.php">Fototeca</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
+                <li><a href="comentarios.php">Comentarios</a></li>
             </ul>
         </nav>
     </header>
@@ -62,4 +63,49 @@
         <p>Hecho con 💖 para los amantes de los gatos</p>
     </footer>
 </body>
+
+<?php
+// 1. Incluir el archivo de conexión
+include 'db_connection.php'; // Ajusta la ruta si es necesario
+
+// 2. Verificar si el formulario se ha enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_nota'])) {
+    
+    // 3. Obtener los datos del formulario
+    $nombreyapellido = trim($_POST['nombreyapellido']);
+    $usuario = trim($_POST['usuario']);
+    $email = trim($_POST['email']);
+    $nota = trim($_POST['nota']);
+    
+    // 4. Generar la fecha actual (como requiere el proyecto)
+    // Usamos el formato "d/m/Y H:i:s" para guardarlo en el VARCHAR
+    $fechanota = date("d/m/Y H:i:s"); 
+
+    // 5. Preparar la consulta SQL (IMPORTANTE: Sentencias preparadas para seguridad)
+    $sql = "INSERT INTO comentarios (nombreyapellido, usuario, email, nota, fechanota) VALUES (?, ?, ?, ?, ?)";
+    
+    // Crear una sentencia preparada
+    $stmt = $conn->prepare($sql);
+    
+    // 6. Vincular los parámetros (s = string, i = integer, etc.)
+    // 'sssss' indica que todos los 5 parámetros son strings
+    $stmt->bind_param("sssss", $nombreyapellido, $usuario, $email, $nota, $fechanota);
+    
+    // 7. Ejecutar la sentencia
+    if ($stmt->execute()) {
+        // Redirigir para evitar reenvío del formulario (Good Practice)
+        header("Location: comentarios.php?status=success");
+        exit();
+    } else {
+        echo "Error al agregar la nota: " . $stmt->error;
+    }
+
+    // 8. Cerrar la sentencia
+    $stmt->close();
+}
+
+// NOTA: La conexión ($conn) se cierra al final del script automáticamente, 
+// pero se puede cerrar manualmente si es necesario.
+?>
+
 </html>
