@@ -80,126 +80,6 @@ $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patitas - Comentarios</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <style>
-        .comentarios-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .form-comentario {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        .btn {
-            background: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .btn:hover {
-            background: #45a049;
-        }
-        
-        .comentario {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-        
-        .comentario-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .comentario-info h4 {
-            margin: 0;
-            color: #333;
-        }
-        
-        .comentario-info .email {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .comentario-fecha {
-            color: #999;
-            font-size: 12px;
-        }
-        
-        .comentario-texto {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        
-        .comentario-acciones {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .btn-editar, .btn-eliminar {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        
-        .btn-editar {
-            background: #2196F3;
-            color: white;
-        }
-        
-        .btn-eliminar {
-            background: #f44336;
-            color: white;
-        }
-        
-        .form-editar {
-            display: none;
-            margin-top: 10px;
-        }
-        
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border: 1px solid #c3e6cb;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -256,11 +136,11 @@ $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <textarea id="nota" name="nota" rows="4" required maxlength="1000" placeholder="Escribe tu comentario aquí... (máximo 1000 caracteres)"></textarea>
                 </div>
                 
-                <button type="submit" class="btn">Enviar Comentario</button>
+                <button type="submit" class="btn submit-btn">Enviar Comentario</button>
             </form>
 
             <!-- Lista de comentarios existentes -->
-            <h2>Comentarios Existentes (<?php echo count($comentarios); ?>)</h2>
+            <h2 class="comentarios-title">Comentarios Existentes (<?php echo count($comentarios); ?>)</h2>
             
             <?php if (count($comentarios) > 0): ?>
                 <?php foreach($comentarios as $comentario): ?>
@@ -291,13 +171,13 @@ $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="form-group">
                             <textarea name="nota" rows="3" required><?php echo htmlspecialchars($comentario['nota']); ?></textarea>
                         </div>
-                        <button type="submit" class="btn">Guardar Cambios</button>
-                        <button type="button" class="btn" onclick="ocultarEditar(<?php echo $comentario['id']; ?>)">Cancelar</button>
+                        <button type="submit" class="btn submit-btn">Guardar Cambios</button>
+                        <button type="button" class="btn btn-cancelar" onclick="ocultarEditar(<?php echo $comentario['id']; ?>)">Cancelar</button>
                     </form>
                 </div>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p style="text-align: center; color: #666; padding: 40px;">
+                <p class="no-comentarios">
                     No hay comentarios aún. ¡Sé el primero en comentar!
                 </p>
             <?php endif; ?>

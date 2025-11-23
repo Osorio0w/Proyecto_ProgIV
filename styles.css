@@ -537,3 +537,258 @@ footer {
     outline: none;
     border-color: orange;
 }
+
+/* ===== ESTILOS PARA COMENTARIOS ===== */
+
+.comentarios-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-comentario {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-comentario .form-group {
+    margin-bottom: 20px;
+}
+
+.form-comentario .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c5530;
+}
+
+.form-comentario .form-group input,
+.form-comentario .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #B2EDC5;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.form-comentario .form-group input:focus,
+.form-comentario .form-group textarea:focus {
+    outline: none;
+    border-color: #eca023;
+}
+
+.form-comentario .submit-btn {
+    background: #eca023;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    margin-top: 10px;
+}
+
+.form-comentario .submit-btn:hover {
+    background: #d18a1f;
+    transform: translateY(-2px);
+}
+
+.comentarios-title {
+    text-align: center;
+    color: #2c5530;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.comentario {
+    background: white;
+    border: 2px solid #B2EDC5;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.comentario:hover {
+    transform: translateY(-2px);
+}
+
+.comentario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.comentario-info h4 {
+    margin: 0;
+    color: #2c5530;
+    font-size: 1.2rem;
+}
+
+.comentario-info h4 small {
+    color: #eca023;
+    font-weight: normal;
+}
+
+.comentario-info .email {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.comentario-fecha {
+    color: #999;
+    font-size: 12px;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.comentario-texto {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1rem;
+}
+
+.comentario-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-editar {
+    background: #2196F3;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #1976D2;
+    transform: translateY(-1px);
+}
+
+.btn-eliminar {
+    background: #f44336;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background: #d32f2f;
+    transform: translateY(-1px);
+}
+
+.form-editar {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.form-editar .form-group {
+    margin-bottom: 15px;
+}
+
+.form-editar textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #B2EDC5;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-editar textarea:focus {
+    outline: none;
+    border-color: #eca023;
+}
+
+.btn-cancelar {
+    background: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background: #545b62;
+    transform: translateY(-1px);
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 2px solid #c3e6cb;
+    text-align: center;
+    font-weight: bold;
+}
+
+.no-comentarios {
+    text-align: center;
+    color: #666;
+    padding: 60px 20px;
+    font-size: 1.1rem;
+    background: white;
+    border-radius: 15px;
+    border: 2px dashed #B2EDC5;
+}
+
+/* Responsive para comentarios */
+@media (max-width: 768px) {
+    .comentarios-container {
+        padding: 15px;
+    }
+    
+    .form-comentario {
+        padding: 20px;
+    }
+    
+    .comentario-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .comentario-fecha {
+        align-self: flex-start;
+    }
+    
+    .comentario-acciones {
+        justify-content: center;
+    }
+    
+    .form-editar .submit-btn,
+    .form-editar .btn-cancelar {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
