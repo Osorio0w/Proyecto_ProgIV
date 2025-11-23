@@ -43,18 +43,18 @@
                 </div>
 
                 <div class="gallery-item fotos">
-                    <img src="assets/gatito2.jpeg" alt="Gatito tierno">
+                    <img src="assets/gatito2.jpeg" alt="Gatito tierno"  >
                     <div class="overlay">
-                        <h3>Gatito Dormilón</h3>
-                        <p>Hora de la siesta</p>
+                        <h3>Gatito Juguetón</h3>
+                        <p>profe póngame 20</p>
                     </div>
                 </div>
 
                 <div class="gallery-item fotos">
                     <img src="assets/gatito3.jpeg" alt="Gatito elegante">
                     <div class="overlay">
-                        <h3>Gatito Elegante</h3>
-                        <p>Pose perfecta</p>
+                        <h3>más gatitos</h3>
+                        <p>se ven frescos</p>
                     </div>
                 </div>
 
@@ -82,10 +82,10 @@
                 </div>
 
                 <div class="gallery-item fotos">
-                    <img src="https://placekitten.com/400/300" alt="Gatito adicional">
+                    <img src="assets/gatito4.jpeg" alt="Gatito adicional (triste)">
                     <div class="overlay">
-                        <h3>Gatito Explorador</h3>
-                        <p>Nuevas aventuras</p>
+                        <h3>gatito truste</h3>
+                        <p>q le habrá pasao</p>
                     </div>
                 </div>
             </div>
